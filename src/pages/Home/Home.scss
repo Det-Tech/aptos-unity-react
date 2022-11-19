@@ -1,0 +1,247 @@
+.home {
+  background-color: #771D1D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &__title {
+    color: #FFFCFC;
+    font-size: 80px;
+    font-family: Horrified !important;
+  }
+  &__description {
+    color: #f3f3f3;
+    margin: 20px 0px;
+    font-family: Chivo;
+    font-size: 18px;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .btn {
+    background-color: #771D1D;
+    border: 1px solid #FFFCFC;
+    border-radius: 2px;
+    color: #Fdf2f2;
+    box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+    font-family: Chivo;
+    font-weight: 600;
+    transition: background-color, border-color, color, 0.1s ease-in-out;
+    margin: 0px 10px;
+    display: inline-flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 18px;
+    line-height: 1em;
+    min-height: 3rem;
+    text-decoration-line: none;
+    animation: button-pop var(--animation-btn, 0.25s) ease-out;
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+  }
+}
+
+.btn {
+  background-color: #6d28d9;
+  border: 1px solid #202933;
+  border-radius: 2px;
+  color: #FFFFFF;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  font-weight: 600;
+  transition: background-color, border-color, color, 0.1s ease-in-out;
+  margin: 0px 10px;
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  padding-left: 1rem;
+  font-family: Chivo;
+  padding-right: 1rem;
+  font-size: 18px;
+  line-height: 1em;
+  min-height: 3rem;
+  text-decoration-line: none;
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.btn:hover {
+  box-shadow: #FFFCFC 0px 2px 4px -1px, #FFFCFC 0px 4px 5px 0px, #FFFCFC 0px 1px 10px 0px;
+}
+
+.home.away {
+  transform: translateY(-100%);
+  transition: all 0.6s;
+}
+
+.walletIcon:hover{
+  cursor: pointer !important;
+}
+
+.body {
+  border-top: #000000 2px solid;
+}
+
+.minimal {
+  background-color: #FEFEFE !important;
+  height: 100vh;
+  .header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    font-family: Chivo;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 190px);
+    &__container {
+      border-radius: 2px;
+      background: #fEFEFE;
+      padding: 20px 30px;
+      font-family: Chivo;
+      height: 450px;
+      border-width: 2px;
+      width: 1000px;
+      &__content {
+        display: flex;
+        font-family: Chivo;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        .connect-wallet-title {
+          font-size: 24px;
+          background-color: #771D1D;
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0px 20px;
+    .btn {
+      background-color: #fefefe;
+      border: 1px solid #000000;
+      border-radius: 2px;
+      color: #000000;
+      box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+      font-family: Chivo;
+      font-weight: 600;
+      transition: background-color, border-color, color, 0.1s ease-in-out;
+      margin: 0px 5px;
+      display: inline-flex;
+      flex-shrink: 0;
+      cursor: pointer;
+      user-select: none;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 2rem;
+      padding: 0px 10px;
+      font-size: 12px;
+      line-height: 1em;
+      min-height: 2rem;
+      text-decoration-line: none;
+      animation: button-pop var(--animation-btn, 0.25s) ease-out;
+      --tw-border-opacity: 1;
+      --tw-bg-opacity: 1;
+      --tw-text-opacity: 1;
+    }
+    .btn:hover {
+      box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+    }
+  }
+}
+
+.Previewpic {
+  position: absolute;
+  right: 15%;
+bottom: 180px;
+}
+
+@media only screen and (max-width: 900px) {
+  .Previewpic {
+      visibility: hidden;
+  }
+}
+
+.Time {
+  line-height: 2em;
+}
+
+.copyrights {
+  font-family: Chivo;
+}
+
+.btn-buy {
+  background-color: #45C400;
+  border: 1px solid #202933;
+  border-radius: 2px;
+  color: #FFFFFF;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  font-weight: 600;
+  transition: background-color, border-color, color, 0.1s ease-in-out;
+  margin: 0px 10px;
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3rem;
+  padding-left: 1rem;
+  font-family: Chivo;
+  padding-right: 1rem;
+  font-size: 18px;
+  line-height: 1em;
+  min-height: 3rem;
+  text-decoration-line: none;
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.Preview {
+  width: 325px;
+  height: 325px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    .btn-container {
+      flex-direction: column;
+    }
+  }
+}

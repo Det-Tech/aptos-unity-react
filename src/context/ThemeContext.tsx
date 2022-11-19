@@ -1,0 +1,35 @@
+import React, { useState, FC } from "react"
+
+interface IThemeContext {
+  dark: string
+  toggleDark?: (param: string) => void
+}
+
+const defaultState = {
+  dark: "theme-dark",
+}
+
+interface Props {
+  children: React.ReactNode;
+}
+
+export const ThemeContext = React.createContext<IThemeContext>(defaultState)
+
+export const ThemeProvider: FC<Props> = ({ children }) => {
+  const [dark, setDark] = useState(defaultState.dark)
+
+  const toggleDark = (param: string) => {
+    setDark(param)
+  }
+
+  return (
+    <ThemeContext.Provider
+      value={{
+        dark,
+        toggleDark,
+      }}
+    >
+      {children}
+    </ThemeContext.Provider>
+  )
+}
