@@ -207,11 +207,6 @@ export const Home: React.FC = () => {
 
   return (
     <div>
-      <button onClick={()=>{sendMessage("UI", "RequestWalletAddress", "testCoding...");}}>test</button>
-      <button onClick={()=>{const temp = []; temp.push({"NFT": "NFT1", "title": "title"}); temp.push({"NFT": "NFT1", "title": "title"});
-        sendMessage("UI", "RequestNFTList", JSON.stringify(temp));}}>
-        test
-      </button>
       <Fragment>
           <Unity unityProvider={unityProvider} style={{width: "100vw", height: "100vh" }}/>
       </Fragment>
