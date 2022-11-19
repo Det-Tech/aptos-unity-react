@@ -136,13 +136,7 @@ export const Home: React.FC = () => {
   
   const handleGetNFTList = useCallback(async(pageNum: any, walletInfo: any) => {
     console.log("GetNFTList=>", pageNum)
-    console.log(account)
-    console.log(myAddress)
-    console.log(walletInfo)
-    console.log(JSON.parse(walletInfo))
-    console.log(JSON.parse(walletInfo).wallet)
-    console.log("GetNFTList=>", account?.address.toString())
-    getNFTListForWallet(account?.address.toString(), 10, pageNum*10)
+    getNFTListForWallet(JSON.parse(walletInfo).wallet, 10, pageNum*10)
   }, []);
 
   const handleAptosWalletDisconnect = useCallback(async() => {
