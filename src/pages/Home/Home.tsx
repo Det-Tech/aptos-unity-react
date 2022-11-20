@@ -122,10 +122,10 @@ export const Home: React.FC = () => {
 
       const res = await axios(config)
       const metadata  = res.data.data.current_token_datas[0]
-      let tempMetadata = metadata.metadata_uri.replace("ipfs://", "cloudflare-ipfs.com/ipfs/");
+      let tempMetadata = metadata.metadata_uri.replace("ipfs://", "https://cloudflare-ipfs.com/ipfs/");
       const resData = await axios(tempMetadata);
       const imageURI = resData.data.image;
-      let tempImage = imageURI.replace("ipfs://", "cloudflare-ipfs.com/ipfs/");
+      let tempImage = imageURI.replace("ipfs://", "https://cloudflare-ipfs.com/ipfs/");
       const description = resData.data.image;
       metadata.image = tempImage
       metadata.description = description
