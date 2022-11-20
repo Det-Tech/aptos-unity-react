@@ -122,10 +122,10 @@ export const Home: React.FC = () => {
 
       const res = await axios(config)
       const metadata  = res.data.data.current_token_datas[0]
-      let tempMetadata = metadata.metadata_uri.replace("ipfs://", "https://cloudflare-ipfs.com/ipfs/");
+      let tempMetadata = metadata.metadata_uri.replace("ipfs://", "https://gateway.ipfs.io/ipfs/");
       const resData = await axios(tempMetadata);
       const imageURI = resData.data.image;
-      let tempImage = imageURI.replace("ipfs://", "https://cloudflare-ipfs.com/ipfs/");
+      let tempImage = imageURI.replace("ipfs://", "https://gateway.ipfs.io/ipfs/");
       const description = resData.data.image;
       metadata.image = tempImage
       metadata.description = description
@@ -200,7 +200,7 @@ export const Home: React.FC = () => {
       const temp = `(${account.address.toString().slice(0,4)}...${account.address.toString().slice(-4)})`;
       sendMessage("UI", "RequestWalletAddress", JSON.stringify({wallet:account.address.toString(), abbrAddress:temp}));
       getNFTCountForWallet(account.address.toString())
-      getNFTListForWallet("0x677d0a467173caf5c296e3b8a18ea1cc11377efbc2ea46fa54840d373a9875fa", 10, 0); 
+      getNFTListForWallet(account.address.toString(), 10, 0); 
     }else{
       setMyAddress("")
     }
