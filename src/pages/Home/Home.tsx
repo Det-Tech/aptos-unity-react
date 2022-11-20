@@ -200,7 +200,7 @@ export const Home: React.FC = () => {
       const temp = `(${account.address.toString().slice(0,4)}...${account.address.toString().slice(-4)})`;
       sendMessage("UI", "RequestWalletAddress", JSON.stringify({wallet:account.address.toString(), abbrAddress:temp}));
       getNFTCountForWallet(account.address.toString())
-      getNFTListForWallet(account.address.toString(), 10, 0); 
+      getNFTListForWallet("0x677d0a467173caf5c296e3b8a18ea1cc11377efbc2ea46fa54840d373a9875fa", 10, 0); 
     }else{
       setMyAddress("")
     }
