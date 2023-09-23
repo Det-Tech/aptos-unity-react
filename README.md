@@ -9,7 +9,7 @@
 1. Clone the template repository:
 
 ```bash
-    > git clone https://github.com/gonida/aptos-mint-frontend.git
+    > git clone https://github.com/Det-Tech/aptos-unity-react
 ```
 
 2. Install dependencies:
